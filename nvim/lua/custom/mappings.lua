@@ -15,7 +15,7 @@ M.general = {
 --
     ["<leader>rr"] = {
       function ()
-        vim.cmd("term cargo run")
+        vim.cmd("split term:// cargo run")
       end,
       "Run Rust Files",
       { noremap = true, silent = true}  
@@ -23,7 +23,7 @@ M.general = {
 --
     ["<leader>rp"] = {
       function ()
-        vim.cmd("term python3 %")        
+        vim.cmd("split term://python3 %")        
       end,
       "Run Python script",
       { noremap = true, silent = true}
