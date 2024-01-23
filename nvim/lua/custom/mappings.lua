@@ -12,7 +12,14 @@ local M = {}
 M.general = {
   n = {
     [";"] = {":", "enter command mode", opts = { nowait = true } },
---
+    ["<leader>rb"] = {
+      function ()
+        vim.cmd("splt term:// cargo build")
+      end,
+      "Build Rust Files",
+      { noremap = true, silent = true}
+    },
+    --
     ["<leader>rr"] = {
       function ()
         vim.cmd("split term:// cargo run")
