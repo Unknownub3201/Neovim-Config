@@ -14,7 +14,7 @@ M.general = {
     [";"] = {":", "enter command mode", opts = { nowait = true } },
     ["<leader>rb"] = {
       function ()
-        vim.cmd("splt term:// cargo build")
+        vim.cmd("split term:// cargo build")
       end,
       "Build Rust Files",
       { noremap = true, silent = true}
